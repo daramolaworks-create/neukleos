@@ -68,7 +68,13 @@
         <h2>Connect with Neukleos <em>Today</em></h2>
         <form class="contact-form">
           <input type="text" placeholder="Name" required />
-          <input type="tel" placeholder="Phone" required />
+          <div class="phone-fields">
+            <select name="phone_country" id="phone-country" aria-label="Phone country code" required>
+              <option value="+234" data-country="NG" selected>NG +234</option>
+            </select>
+            <input type="tel" name="phone_number" id="phone-number" placeholder="Phone" autocomplete="tel-national" required />
+            <input type="hidden" name="phone" id="full-phone-number" />
+          </div>
           <input type="email" placeholder="Email" required />
           <fieldset class="service-options">
             <legend>What are you looking for?</legend>
@@ -105,8 +111,12 @@
           <p>+234 807 429 2521</p>
         </div>
         <div class="info-block">
-          <h4>Office</h4>
+          <h4>Lagos Office</h4>
           <p>2 Reverend Ogunbiyi Street,<br />Ikeja GRA, Lagos Nigeria.</p>
+        </div>
+        <div class="info-block">
+          <h4>UK Office</h4>
+          <p>86-90 Paul Street,<br />London EC2A 4NE</p>
         </div>
         <div class="info-block">
           <h4>Job Applications</h4>
@@ -176,6 +186,7 @@
         <a href="#top">Back to top</a>
       </div>
     </footer>
+    <script src="assets/js/country-telephone-data.js"></script>
     <script>
       const siteHeader = document.querySelector(".site-header");
       function setHeaderBackground() {
@@ -188,6 +199,9 @@
 
       const budgetCurrency = document.querySelector("#budget-currency");
       const budgetRange = document.querySelector("#budget-range");
+      const phoneCountry = document.querySelector("#phone-country");
+      const phoneNumber = document.querySelector("#phone-number");
+      const fullPhoneNumber = document.querySelector("#full-phone-number");
       const budgetRanges = {
         NGN: [
           ["4m-10m", "4,000,000 - 10,000,000"],
@@ -209,6 +223,24 @@
         ],
       };
 
+      function populatePhoneCountries() {
+        if (!phoneCountry || !window.countryTelephoneData?.allCountries) return;
+        const countries = [...window.countryTelephoneData.allCountries].sort((first, second) =>
+          first.name.localeCompare(second.name)
+        );
+
+        phoneCountry.innerHTML = "";
+        countries.forEach((country) => {
+          const option = document.createElement("option");
+          option.value = `+${country.dialCode}`;
+          option.dataset.country = country.iso2.toUpperCase();
+          option.textContent = `${country.iso2.toUpperCase()} +${country.dialCode}`;
+          option.title = country.name;
+          phoneCountry.appendChild(option);
+        });
+        selectPhoneCountry("NG");
+      }
+
       function updateBudgetRanges() {
         if (!budgetCurrency || !budgetRange) return;
         const ranges = budgetRanges[budgetCurrency.value] || [];
@@ -226,6 +258,71 @@
       }
 
       budgetCurrency?.addEventListener("change", updateBudgetRanges);
+
+      const timezoneCountries = {
+        "Africa/Lagos": "NG",
+        "Europe/London": "GB",
+        "America/New_York": "US",
+        "America/Chicago": "US",
+        "America/Denver": "US",
+        "America/Los_Angeles": "US",
+        "America/Toronto": "CA",
+        "Africa/Accra": "GH",
+        "Africa/Johannesburg": "ZA",
+        "Africa/Nairobi": "KE",
+        "Asia/Dubai": "AE",
+      };
+
+      function selectPhoneCountry(countryCode) {
+        if (!phoneCountry || !countryCode) return;
+        const option = phoneCountry.querySelector(`option[data-country="${countryCode.toUpperCase()}"]`);
+        if (option) {
+          option.selected = true;
+          updateFullPhoneNumber();
+        }
+      }
+
+      function detectPhoneCountryFallback() {
+        const localeCountry = navigator.language?.split("-")[1];
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        selectPhoneCountry(localeCountry || timezoneCountries[timezone]);
+      }
+
+      function updateFullPhoneNumber() {
+        if (!phoneCountry || !phoneNumber || !fullPhoneNumber) return;
+        fullPhoneNumber.value = `${phoneCountry.value} ${phoneNumber.value.trim()}`.trim();
+      }
+
+      populatePhoneCountries();
+      detectPhoneCountryFallback();
+      fetch("https://ipapi.co/json/")
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data) => selectPhoneCountry(data?.country_code))
+        .catch(() => {});
+
+      phoneCountry?.addEventListener("change", updateFullPhoneNumber);
+      phoneNumber?.addEventListener("input", updateFullPhoneNumber);
+
+      const contactForm = document.querySelector(".contact-form");
+      const serviceCheckboxes = [...document.querySelectorAll('input[name="services[]"]')];
+
+      function validateServiceOptions() {
+        const hasSelectedService = serviceCheckboxes.some((checkbox) => checkbox.checked);
+        serviceCheckboxes[0]?.setCustomValidity(hasSelectedService ? "" : "Please select at least one option.");
+        return hasSelectedService;
+      }
+
+      serviceCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", validateServiceOptions);
+      });
+
+      contactForm?.addEventListener("submit", (event) => {
+        updateFullPhoneNumber();
+        if (!validateServiceOptions()) {
+          event.preventDefault();
+          serviceCheckboxes[0]?.reportValidity();
+        }
+      });
     </script>
   </body>
 </html>

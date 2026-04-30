@@ -2898,6 +2898,13 @@ p {
   transition: border-color 0.3s ease;
 }
 
+.phone-fields {
+  display: grid;
+  grid-template-columns: minmax(108px, 150px) minmax(0, 1fr);
+  gap: clamp(14px, 3vw, 24px);
+  align-items: end;
+}
+
 .service-options {
   display: grid;
   grid-template-columns: repeat(2, minmax(220px, 1fr));
