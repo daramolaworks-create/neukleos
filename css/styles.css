@@ -1509,7 +1509,8 @@ a.service-row:hover {
   .service-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 16px;
+    padding: 40px 0;
   }
 
   .service-meta {
@@ -1520,7 +1521,7 @@ a.service-row:hover {
   .service-content-wrapper,
   .service-row.reverse .service-content-wrapper {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
   }
   
   .service-row.reverse .service-img {
@@ -1529,6 +1530,7 @@ a.service-row:hover {
 
   .service-details h2 {
     font-size: clamp(1.6rem, 5vw, 2.5rem);
+    margin-bottom: 12px;
   }
 
   .service-img {
