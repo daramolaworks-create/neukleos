@@ -303,7 +303,7 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(36px, 7vw, 120px);
+  gap: clamp(24px, 5vw, 80px);
   min-height: 520vh;
   padding: clamp(120px, 17vw, 230px) var(--page-x) clamp(120px, 15vw, 220px);
   background: #000;
@@ -370,7 +370,7 @@ img {
   inset: 0;
   display: grid;
   align-items: center;
-  justify-items: end;
+  justify-items: start;
   opacity: var(--card-opacity);
   pointer-events: none;
   transform: translateY(var(--card-y)) scale(var(--card-scale));
