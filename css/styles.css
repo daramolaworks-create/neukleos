@@ -659,8 +659,8 @@ p {
 .footer-partners p {
   margin: 0;
   color: rgba(246, 242, 234, 0.42);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -668,14 +668,14 @@ p {
 .footer a:not(.brand),
 .footer-contact span,
 .footer-bottom span {
-  color: rgba(246, 242, 234, 0.72);
-  font-size: clamp(0.94rem, 0.9vw, 1.05rem);
-  font-weight: 200;
+  color: rgba(246, 242, 234, 0.62);
+  font-size: clamp(0.8rem, 0.72vw, 0.9rem);
+  font-weight: 100;
   line-height: 1.45;
 }
 
 .footer-bottom span {
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .footer a.footer-cta {
