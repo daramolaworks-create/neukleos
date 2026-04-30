@@ -651,8 +651,25 @@ p {
 }
 
 .footer-contact {
-  gap: 12px;
+  gap: 14px;
   min-width: 0;
+}
+
+.footer-email {
+  margin-bottom: 6px;
+}
+
+.footer-office {
+  display: grid;
+  gap: 5px;
+  max-width: 260px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(246, 242, 234, 0.12);
+}
+
+.footer-office span,
+.footer-office a {
+  display: block;
 }
 
 .footer p,
@@ -693,16 +710,17 @@ p {
 }
 
 .footer-contact span {
-  max-width: 330px;
+  max-width: 260px;
   overflow-wrap: break-word;
 }
 
-.footer-contact a[href^="tel"] + span {
-  margin-top: 10px;
-}
-
-.footer-contact span + a[href^="tel"] {
-  margin-top: -2px;
+.footer-contact .footer-office-title {
+  color: rgba(246, 242, 234, 0.42);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .footer-partners {
