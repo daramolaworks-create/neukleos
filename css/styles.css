@@ -910,23 +910,22 @@ img {
   }
 
   .hero h1 {
-    width: min(100%, 300px);
-    max-width: 300px;
-    font-size: clamp(2rem, 9vw, 2.9rem);
-    line-height: 1.08;
-    overflow-wrap: anywhere;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    line-height: 1.1;
+    overflow-wrap: normal;
   }
 
   .hero p {
-    width: min(100%, 310px);
-    max-width: 310px;
-    font-size: 1rem;
-    overflow-wrap: anywhere;
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.95rem;
   }
 
   .hero-content {
-    width: min(310px, calc(100vw - 48px));
-    max-width: min(310px, calc(100vw - 48px));
+    width: 100%;
+    max-width: 100%;
     transform: none;
   }
 
@@ -950,7 +949,7 @@ img {
   }
 
   .projects-sticky h2 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
   }
 
   .projects-sticky {
@@ -984,8 +983,12 @@ img {
   }
 
   .capability-rows strong {
-    font-size: clamp(1.1rem, 7vw, 1.72rem);
-    line-height: 1.12;
+    font-size: clamp(1.05rem, 5.5vw, 1.45rem);
+    line-height: 1.2;
+  }
+  
+  .growth-cta h2 {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
   }
 
   .awards {
@@ -997,12 +1000,12 @@ img {
   }
 
   .footer h2 {
-    font-size: clamp(2rem, 11vw, 3rem);
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
   }
 
   .partner-logos img {
-    max-width: 112px;
-    max-height: 30px;
+    max-width: 140px;
+    max-height: 40px;
   }
 }
 
