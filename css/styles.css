@@ -466,77 +466,17 @@ img {
   line-height: 1;
 }
 
-.placeholder-one {
-  background:
-    radial-gradient(circle at 70% 34%, rgba(253, 197, 23, 0.9) 0 12%, transparent 13%),
-    linear-gradient(145deg, #1c1d22, #050506 48%, #24282d);
-}
-
-.placeholder-one::before {
-  inset: auto 6% 0;
-  height: 46%;
-  background:
-    linear-gradient(135deg, transparent 0 42%, rgba(253, 197, 23, 0.36) 43% 52%, transparent 53%),
-    linear-gradient(112deg, #20242a, #c3c7ce 48%, #111216 49%);
-  clip-path: polygon(0 100%, 20% 42%, 32% 72%, 47% 10%, 68% 82%, 83% 38%, 100% 100%);
-}
-
-.placeholder-two {
-  background:
-    radial-gradient(circle at 50% 50%, #f7f7f7 0 9%, transparent 10%),
-    repeating-linear-gradient(100deg, #ececec 0 10px, #070707 10px 27px);
-  filter: grayscale(1) contrast(1.08);
-}
-
-.placeholder-two::after {
-  inset: 34% 42%;
-  background: #fff;
-  clip-path: polygon(50% 0, 62% 36%, 100% 50%, 62% 64%, 50% 100%, 38% 64%, 0 50%, 38% 36%);
-}
-
-.placeholder-three {
-  background:
-    radial-gradient(ellipse at 42% 68%, #111 0 4%, transparent 5%),
-    radial-gradient(ellipse at 58% 66%, #111 0 4%, transparent 5%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0 67%, rgba(8, 8, 8, 0.98) 68% 100%),
-    linear-gradient(90deg, #f6f6f4, #d8d8d2);
-}
-
-.placeholder-three::before {
-  left: 9%;
-  right: 9%;
-  bottom: 38%;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.28);
-  box-shadow:
-    80px -8px 0 12px #111,
-    210px 0 0 11px #111,
-    350px -4px 0 9px #111;
-}
-
-.placeholder-four {
-  background: radial-gradient(circle at 50% 50%, #1b2530 0 18%, #07080d 52%, #020203 100%);
-}
-
-.placeholder-four::before {
-  inset: 24% 34%;
-  border: 8px solid #FFF300;
-  border-bottom-color: transparent;
-  border-radius: 50% 50% 0 0;
-  filter: drop-shadow(0 0 22px rgba(255, 220, 117, 0.9));
-}
-
-.placeholder-five {
-  background:
-    linear-gradient(100deg, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.22)),
-    linear-gradient(90deg, #20272f, #d8e7ef 58%, #c94b2c);
-}
-
-.placeholder-five::before {
-  inset: 24% 16% 30%;
-  border: 14px solid #334451;
-  border-top: 20px solid #FFF300;
-  border-radius: 8px;
+.placeholder-one,
+.placeholder-two,
+.placeholder-three,
+.placeholder-four,
+.placeholder-five,
+.img-placeholder,
+.about-block-placeholder {
+  background-image: url('../assets/placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .projects-note {
