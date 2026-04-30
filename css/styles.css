@@ -1170,7 +1170,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 6vw, 100px);
-  padding: clamp(80px, 12vw, 160px) var(--page-x);
+  padding: clamp(80px, 12vw, 160px) var(--page-x) clamp(40px, 6vw, 80px);
   background: var(--black);
   color: var(--white);
 }
@@ -1249,7 +1249,7 @@ img {
 .about-culture {
   background: var(--black);
   color: var(--white);
-  padding: clamp(80px, 12vw, 160px) var(--page-x);
+  padding: 0 var(--page-x) clamp(80px, 12vw, 160px);
 }
 
 .culture-header h2 {
