@@ -1354,7 +1354,7 @@ img {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .three-block-item.reverse .block-img {
+  .three-block-item.reverse .block-text {
     order: -1;
   }
   .three-block-item:nth-child(1) .block-img,
