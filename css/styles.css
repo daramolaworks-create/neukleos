@@ -663,7 +663,6 @@ img {
 .footer {
   padding: clamp(70px, 9vw, 112px) var(--page-x) 34px;
   background: #000;
-  border-top: 1px solid var(--line);
 }
 
 .footer-main {
@@ -741,7 +740,6 @@ img {
   gap: 22px;
   margin-top: clamp(56px, 7vw, 86px);
   padding-top: 26px;
-  border-top: 1px solid var(--line);
 }
 
 .partner-logos {
@@ -769,7 +767,6 @@ img {
   gap: 24px;
   margin-top: 38px;
   padding-top: 24px;
-  border-top: 1px solid var(--line);
 }
 
 .footer-bottom a {
