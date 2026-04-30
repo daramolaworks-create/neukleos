@@ -1210,8 +1210,8 @@ img {
 .culture-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: clamp(30px, 6vw, 60px);
+  margin-bottom: clamp(40px, 8vw, 80px);
 }
 
 .culture-item {
@@ -1338,15 +1338,22 @@ img {
 @media (max-width: 900px) {
   .about-hero, .about-philosophy {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-three-blocks {
+    gap: 80px;
+    padding: 80px var(--page-x);
   }
   .three-block-item, .three-block-item.reverse {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   .three-block-item.reverse .block-img {
     order: -1;
   }
   .culture-header h2 {
     font-size: 3rem;
+    margin-bottom: 40px;
   }
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1355,6 +1362,18 @@ img {
     bottom: 20px;
     font-size: 1rem;
     color: var(--white);
+  }
+  .phil-right {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-overlay {
+    font-size: 3rem;
   }
 }
 
