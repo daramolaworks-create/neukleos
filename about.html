@@ -232,6 +232,15 @@
 
       setHeaderBackground();
       window.addEventListener("scroll", setHeaderBackground, { passive: true });
+
+      /* Team member tap-to-color on mobile */
+      document.querySelectorAll(".team-member").forEach(member => {
+        member.addEventListener("click", () => {
+          const isActive = member.classList.contains("is-colored");
+          document.querySelectorAll(".team-member.is-colored").forEach(m => m.classList.remove("is-colored"));
+          if (!isActive) member.classList.add("is-colored");
+        });
+      });
     </script>
   </body>
 </html>

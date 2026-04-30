@@ -1273,6 +1273,8 @@ img {
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   padding: 0 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .team-member {
@@ -1282,9 +1284,12 @@ img {
   background-position: center;
   filter: grayscale(0.8) contrast(1.1);
   transition: filter 0.3s ease;
+  cursor: pointer;
 }
 
-.team-member:hover {
+.team-member:hover,
+.team-member:active,
+.team-member.is-colored {
   filter: grayscale(0);
 }
 
@@ -1298,6 +1303,7 @@ img {
   color: var(--white);
   margin: 0;
   pointer-events: none;
+  z-index: 3;
   text-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
 
