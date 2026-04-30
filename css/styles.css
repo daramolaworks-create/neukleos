@@ -596,7 +596,6 @@ img {
   align-items: center;
   gap: clamp(40px, 8vw, 130px);
   padding: clamp(60px, 10vw, 120px) var(--page-x);
-  border-top: 1px solid var(--line);
   background: #000;
 }
 
