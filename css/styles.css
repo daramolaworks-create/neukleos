@@ -889,6 +889,10 @@ p {
     padding-bottom: 58px;
   }
 
+  .hero-image {
+    object-position: 78% center;
+  }
+
   .hero h1 {
     width: 100%;
     max-width: 100%;
