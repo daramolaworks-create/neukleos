@@ -951,6 +951,19 @@ img {
   color: var(--white);
 }
 
+/* About page logo swap: black logo by default, white on scroll */
+.page-about .logo-white {
+  display: none;
+}
+
+.page-about .site-header.is-scrolled .logo-black {
+  display: none;
+}
+
+.page-about .site-header.is-scrolled .logo-white {
+  display: block;
+}
+
 .about-hero {
   display: grid;
   grid-template-columns: minmax(260px, 1fr) minmax(260px, 1fr);
