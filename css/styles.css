@@ -1351,9 +1351,17 @@ img {
   .three-block-item.reverse .block-img {
     order: -1;
   }
+  .three-block-item:nth-child(1) .block-img,
+  .three-block-item:nth-child(2) .block-img,
+  .three-block-item:nth-child(3) .block-img {
+    aspect-ratio: 16/10;
+  }
   .culture-header h2 {
     font-size: 3rem;
     margin-bottom: 40px;
+  }
+  .culture-grid {
+    grid-template-columns: 1fr;
   }
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
