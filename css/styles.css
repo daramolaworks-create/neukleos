@@ -799,7 +799,6 @@ img {
 
   .projects {
     display: block;
-    min-height: 0;
     padding: 90px var(--page-x) 110px;
   }
 
@@ -811,26 +810,14 @@ img {
   }
 
   .project-stack {
-    position: relative;
-    top: auto;
-    height: auto;
-    min-height: 0;
-  }
-
-  .project-card {
-    position: relative;
-    inset: auto;
-    top: auto;
-    width: 100%;
-    margin-bottom: 72px;
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
-    filter: none;
+    position: sticky;
+    top: 15vh;
+    height: 70vh;
+    min-height: 480px;
   }
 
   .project-frame {
-    min-height: 0;
+    width: 100%;
   }
 
   .project-info,

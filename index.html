@@ -273,7 +273,7 @@
       }
 
       function setActiveProject() {
-        if (!projectSection || !projectCards.length || window.innerWidth <= 900) {
+        if (!projectSection || !projectCards.length) {
           projectCards.forEach((card) => {
             card.style.removeProperty("--card-opacity");
             card.style.removeProperty("--card-y");
