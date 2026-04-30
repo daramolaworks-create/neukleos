@@ -1463,7 +1463,7 @@ a.service-row:hover {
 .service-meta {
   font-size: clamp(2rem, 3vw, 4rem);
   font-family: "Instrument Serif", Georgia, serif;
-  color: var(--accent);
+  color: var(--black);
   width: clamp(60px, 8vw, 120px);
   flex-shrink: 0;
 }
@@ -1509,16 +1509,30 @@ a.service-row:hover {
   .service-row {
     flex-direction: column;
     align-items: flex-start;
+    gap: 24px;
+  }
+
+  .service-meta {
+    width: auto;
+    font-size: 1.5rem;
   }
   
   .service-content-wrapper,
   .service-row.reverse .service-content-wrapper {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
   
   .service-row.reverse .service-img {
-    order: 0; /* Reset order for mobile */
+    order: 0;
+  }
+
+  .service-details h2 {
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
+  }
+
+  .service-img {
+    aspect-ratio: 16/10;
   }
 }
 
