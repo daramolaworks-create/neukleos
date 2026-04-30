@@ -614,8 +614,12 @@ p {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(260px, 1.05fr) repeat(3, minmax(132px, 0.42fr));
-  gap: clamp(34px, 5vw, 78px);
+  grid-template-columns:
+    minmax(250px, 1fr)
+    minmax(150px, 0.42fr)
+    minmax(300px, 0.72fr)
+    minmax(130px, 0.34fr);
+  gap: clamp(44px, 6vw, 110px);
   align-items: start;
 }
 
@@ -642,8 +646,13 @@ p {
 .footer-contact,
 .footer-social {
   display: grid;
-  gap: 11px;
+  gap: 16px;
   align-content: start;
+}
+
+.footer-contact {
+  gap: 12px;
+  min-width: 0;
 }
 
 .footer p,
@@ -660,9 +669,9 @@ p {
 .footer-contact span,
 .footer-bottom span {
   color: rgba(246, 242, 234, 0.72);
-  font-size: 0.92rem;
+  font-size: clamp(0.94rem, 0.9vw, 1.05rem);
   font-weight: 200;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .footer-bottom span {
@@ -684,7 +693,16 @@ p {
 }
 
 .footer-contact span {
-  max-width: 230px;
+  max-width: 330px;
+  overflow-wrap: break-word;
+}
+
+.footer-contact a[href^="tel"] + span {
+  margin-top: 10px;
+}
+
+.footer-contact span + a[href^="tel"] {
+  margin-top: -2px;
 }
 
 .footer-partners {
@@ -732,6 +750,17 @@ p {
 .footer-bottom a {
   color: var(--accent);
   font-size: 0.9rem;
+}
+
+@media (max-width: 1180px) {
+  .footer-main {
+    grid-template-columns: minmax(240px, 1fr) minmax(300px, 1fr);
+    gap: 48px clamp(56px, 8vw, 96px);
+  }
+
+  .footer-contact span {
+    max-width: 360px;
+  }
 }
 
 @media (max-width: 900px) {
