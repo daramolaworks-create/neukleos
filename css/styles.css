@@ -2605,6 +2605,18 @@ p {
   margin-bottom: 80px;
 }
 
+.blog-hero-image {
+  width: min(calc(100% - 48px), 920px);
+  margin: 0 auto 80px;
+  background: #000;
+}
+
+.blog-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .case-content-section {
   padding: 0 var(--page-x) 80px;
   max-width: 1200px;
