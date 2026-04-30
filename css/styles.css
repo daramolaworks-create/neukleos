@@ -1107,25 +1107,24 @@ img {
 .about-three-blocks {
   display: flex;
   flex-direction: column;
-  gap: clamp(80px, 10vw, 160px);
-  padding: clamp(80px, 12vw, 180px) var(--page-x);
+  gap: clamp(120px, 15vw, 220px);
+  padding: clamp(120px, 17vw, 230px) var(--page-x) clamp(120px, 15vw, 220px);
   background: var(--white);
 }
 
 .three-block-item {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: clamp(40px, 8vw, 100px);
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(36px, 7vw, 120px);
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .three-block-item.reverse {
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
 }
 
 .block-text h2 {
+  max-width: 560px;
   font-size: clamp(2rem, 3vw, 4rem);
   font-weight: 300;
   line-height: 1.1;
@@ -1145,6 +1144,7 @@ img {
 }
 
 .block-text p {
+  max-width: 420px;
   color: rgba(0, 0, 0, 0.6);
   font-size: clamp(0.95rem, 1vw, 1.1rem);
   line-height: 1.6;
