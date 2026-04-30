@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service | Neukleos</title>
+    <title>Contact Us | Neukleos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-service-inner">
+  <body class="page-contact">
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="index.html#top" aria-label="Neukleos home">
         <img src="public/logo/black_logo.png" alt="Neukleos" class="logo-black" />
@@ -44,65 +44,56 @@
       </div>
     </aside>
 
-    <main id="top">
-      <section class="service-inner-hero">
-        <div class="service-inner-text">
-          <p class="service-kicker">SERVICES — OUR EXPERTISE</p>
-          <h1>PR <em>& Events</em></h1>
-          <p>Build and protect your reputation through strategic communications and unforgettable brand experiences.</p>
-          <a href="mailto:we@neukleos.com" class="pill pill-red">Let's talk</a>
-        </div>
-        <div class="service-inner-media placeholder-three"></div>
-      </section>
+    <main id="top" class="contact-main">
+      <div class="contact-header">
+        <span class="contact-tag">Contact Us</span>
+        <h1>Your Story Starts Here!<br/>Ready to Elevate Your <em>Business?</em></h1>
+        
+        <p class="contact-reach-text">reach out via email</p>
+        <a href="mailto:we@neukleos.com" class="pill-outline">WE@NEUKLEOS.COM</a>
+      </div>
 
-      <section class="service-inner-statement">
-        <h2>Protect <em>Reputation</em></h2>
-      </section>
+      <div class="contact-form-section">
+        <h2>Connect with Neukleos <em>Today</em></h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Name" required />
+          <input type="tel" placeholder="Phone" required />
+          <input type="email" placeholder="Email" required />
+          <select required>
+            <option value="" disabled selected>What are you looking for?</option>
+            <option value="marketing">Digital Marketing</option>
+            <option value="web">Web Development</option>
+            <option value="seo">SEO Optimization</option>
+            <option value="other">Other</option>
+          </select>
+          <button type="submit" class="pill pill-submit">SUBMIT</button>
+        </form>
+      </div>
 
-      <section class="service-inner-features">
-        <div class="features-header">
-          <h2>What <em>we do</em></h2>
+      <div class="contact-info">
+        <h3>INFO</h3>
+        <div class="info-block">
+          <h4>Phone Number</h4>
+          <p>+234 807 429 2521</p>
         </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">01</div>
-            <h3>Media Relations</h3>
-            <p>Our dedicated team leverages cutting edge tools and methodologies to deliver exceptional results and drive growth.</p>
-            <ul>
-              <li>Comprehensive Analysis</li>
-              <li>Strategic Roadmapping</li>
-              <li>Execution & Delivery</li>
-            </ul>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">02</div>
-            <h3>Event Management</h3>
-            <p>We believe in data-driven decisions that continuously optimize performance and guarantee scalable impact over time.</p>
-            <ul>
-              <li>Performance Tracking</li>
-              <li>Continuous Optimization</li>
-              <li>Reporting & Insights</li>
-            </ul>
-          </div>
+        <div class="info-block">
+          <h4>Office</h4>
+          <p>2 Reverend Ogunbiyi Street, Ikeja GRA, Lagos Nigeria.</p>
         </div>
-      </section>
-
-      <section class="about-yellow-cta">
-        <div class="yellow-content">
-          <h2>Ready to <em>grow</em>?</h2>
-          <p>Let's build something extraordinary together.</p>
-          <a href="mailto:we@neukleos.com" class="pill pill-red">Let's talk</a>
+        <div class="info-block">
+          <h4>Job Applications</h4>
+          <p>we@neukleos.com</p>
         </div>
-      </section>
+      </div>
     </main>
 
-    <footer class="footer" id="contact">
+    <footer class="footer" id="contact-footer">
       <div class="footer-main">
         <div class="footer-brand-block">
           <a class="brand footer-brand" href="#top">
             <img src="public/logo/white_logo.png" alt="Neukleos" />
           </a>
-          <h2>Let’s build what <em>growth</em> needs next.</h2>
+          <h2>Let's build what <em>growth</em> needs next.</h2>
           <a class="pill footer-cta" href="mailto:we@neukleos.com">Get in touch</a>
         </div>
 
@@ -147,13 +138,11 @@
     </footer>
     <script>
       const siteHeader = document.querySelector(".site-header");
-      
       function setHeaderBackground() {
         if (!siteHeader) return;
         const isScrolled = window.scrollY > 50;
         siteHeader.classList.toggle("is-scrolled", isScrolled);
       }
-
       setHeaderBackground();
       window.addEventListener("scroll", setHeaderBackground, { passive: true });
     </script>
