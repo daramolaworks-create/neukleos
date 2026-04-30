@@ -287,7 +287,6 @@ img {
   background: var(--accent);
   color: #080808;
   font-size: 0.9rem;
-  box-shadow: 0 0 32px rgba(253, 197, 23, 0.42);
 }
 
 .intro p {
@@ -352,7 +351,6 @@ img {
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
-  box-shadow: 0 0 24px rgba(253, 197, 23, 0.42);
 }
 
 .project-stack {
@@ -569,7 +567,8 @@ img {
   grid-template-columns: 72px 1fr;
   gap: 28px;
   align-items: center;
-  min-height: 82px;
+  min-height: 110px;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
   color: rgba(246, 242, 234, 0.32);
   transition: color 180ms ease, padding 180ms ease;
@@ -1083,10 +1082,16 @@ img {
 
 .huge-re {
   margin: 0;
-  font-size: clamp(15rem, 30vw, 40rem);
-  font-weight: 800;
-  line-height: 0.8;
-  letter-spacing: -0.05em;
+  font-size: clamp(3rem, 6vw, 7rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.huge-re em {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .re-giant {
@@ -1250,13 +1255,11 @@ img {
 .pill-red {
   background: #E50914;
   color: var(--white);
-  box-shadow: 0 0 24px rgba(229, 9, 20, 0.42);
 }
 
 .pill-white {
   background: #ffffff;
   color: #000000;
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.42);
 }
 
 .about-culture {
@@ -2252,8 +2255,8 @@ p {
   min-height: 42px;
   padding: 0 26px;
   border-radius: 999px;
-  border: 1px solid #FFF300;
-  color: #FFF300;
+  border: 1px solid rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.5);
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
