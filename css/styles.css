@@ -1124,7 +1124,6 @@ img {
 }
 
 .block-text h2 {
-  max-width: 560px;
   font-size: clamp(2rem, 3vw, 4rem);
   font-weight: 300;
   line-height: 1.1;
@@ -1144,7 +1143,6 @@ img {
 }
 
 .block-text p {
-  max-width: 420px;
   color: rgba(0, 0, 0, 0.6);
   font-size: clamp(0.95rem, 1vw, 1.1rem);
   line-height: 1.6;
