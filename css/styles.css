@@ -1648,7 +1648,7 @@ a.service-row:hover {
 .feature-icon {
   font-family: "Instrument Serif", Georgia, serif;
   font-size: 2rem;
-  color: var(--accent);
+  color: var(--black);
   margin-bottom: 24px;
 }
 
