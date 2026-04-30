@@ -554,7 +554,7 @@ img {
 }
 
 .capabilities {
-  padding: 0 var(--page-x) clamp(130px, 16vw, 210px);
+  padding: 0 var(--page-x) clamp(40px, 6vw, 80px);
   background: #000;
 }
 
@@ -595,7 +595,7 @@ img {
   grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(40px, 8vw, 130px);
-  padding: clamp(110px, 16vw, 210px) var(--page-x);
+  padding: clamp(60px, 10vw, 120px) var(--page-x);
   border-top: 1px solid var(--line);
   background: #000;
 }
