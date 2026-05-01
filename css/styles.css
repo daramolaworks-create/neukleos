@@ -687,7 +687,7 @@ p {
 .footer-bottom span {
   color: rgba(246, 242, 234, 0.62);
   font-size: clamp(0.8rem, 0.72vw, 0.9rem);
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.45;
 }
 
