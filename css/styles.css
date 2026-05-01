@@ -1069,7 +1069,7 @@ p {
 .about-re-banner {
   position: relative;
   width: 100%;
-  height: clamp(400px, 60vh, 800px);
+  height: clamp(620px, 86vh, 1100px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1085,18 +1085,20 @@ p {
 }
 
 .re-content {
-  position: relative;
+  position: absolute;
+  left: var(--page-x);
+  bottom: clamp(44px, 7vw, 96px);
   z-index: 2;
-  text-align: center;
+  text-align: right;
   color: var(--white);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .huge-re {
   margin: 0;
-  font-size: clamp(3rem, 6vw, 7rem);
+  font-size: clamp(2.35rem, 4vw, 4.85rem);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -1184,8 +1186,21 @@ p {
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
+.about-reset-img {
+  background-image: url('../assets/about-re-engineering-reset.jpeg');
+  background-position: center bottom;
+}
+
+.about-experience-img {
+  background-image: url('../assets/about-experience-transformation.jpeg');
+}
+
+.about-strategies-img {
+  background-image: url('../assets/about-strategies-growth.jpeg');
+}
+
 .three-block-item:nth-child(1) .block-img {
-  aspect-ratio: 21/9;
+  aspect-ratio: 21/11;
 }
 .three-block-item:nth-child(2) .block-img {
   aspect-ratio: 16/10;
@@ -1315,6 +1330,26 @@ p {
   position: relative;
   overflow: hidden;
   box-shadow: none;
+}
+
+.culture-defy-img,
+.culture-build-img,
+.culture-spark-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.culture-defy-img {
+  background-image: url('../assets/culture-defy.jpeg');
+}
+
+.culture-build-img {
+  background-image: url('../assets/culture-build.jpeg');
+}
+
+.culture-spark-img {
+  background-image: url('../assets/culture-spark.jpeg');
 }
 
 .culture-item .culture-word {
@@ -2159,7 +2194,7 @@ a.service-row:hover {
   position: relative;
   overflow: hidden;
   background: var(--black);
-  color: var(--black);
+  color: var(--white);
   padding: clamp(140px, 18vw, 220px) var(--page-x) clamp(100px, 12vw, 160px);
   text-align: center;
 }
@@ -2168,7 +2203,7 @@ a.service-row:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../assets/cityscape-skyline-chongqing-cloud-sky.jpg');
+  background-image: url('../assets/industry-excellence-hero.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -2177,8 +2212,7 @@ a.service-row:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(230, 34, 34, 0.62);
-  mix-blend-mode: soft-light;
+  background: rgba(0, 0, 0, 0.28);
 }
 
 .industries-hero-content {
